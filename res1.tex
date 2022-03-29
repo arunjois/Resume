@@ -1,81 +1,193 @@
-% LaTeX file for resume 
-% This file uses the resume document class (res.cls)
-\documentclass{res} 
-\usepackage{hyperref}
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
-\setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
+%-------------------------
+% Resume in Latex
+% Author : Arun Jois
+%------------------------
 
-\begin{document} 
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[ \vspace{-5pt}]
+%}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+	\item\small{
+		\textbf{#1}{: #2 \vspace{-2pt}}
+	}
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+	\begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
 	
-	\name{Arun S Jois\\arunsjois@outlook.com\\9964294370\\
-		\url{https://github.com/arunjois/}}     % the \\[12pt] adds a blank
-	% line after name      
+	%----------HEADING-----------------
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{\href{http://sourabhbajaj.com/}{\Large Arun S Jois}} & Email : \href{mailto:arunsjois@outlook.com}{arunsjois@outlook.com}\\
+		\href{https://arunjois.github.io} {https://arunjois.github.io} & 
+		\href{}{1426/2 Sri Ranga Harsha Mahal Road Hassan-573201}\\ 
+		\href{}{DOB:01-02-1997} & \href{}{+91 9964294370}
+	\end{tabular*}
 	
-	\address{\bf  PRESENT ADDRESS\\YASHMITHA LUXURY PG FOR GENTS\\Krishna garden Road BEML Layout 7th Stage\\Bangalore-59}
-	\address{\bf PERMANENT ADDRESS \\No.1426/2 SRI RANGA\\Opposite to Morden Opticals\\ Harsha Mahal Road \\Hassan-573201}
 	
-	\begin{resume}
-		
-		\section{JOB OBJECTIVE}          
-		Looking for a position where I can contribute to society in enhancing mankind.          
-		
-		\section{EDUCATION}
-		\vspace{-0.1in}	
-		\begin{tabbing}
-			\hspace{2.3in}\= \hspace{2.6in}\= \kill % set up two tab positions
-			{\bf RV College Of Engineering} \>MCA(7.35 CGPA)     \>2020
-			
-		\end{tabbing}\vspace{-20pt}      % suppress blank line after tabbing
-		\begin{tabbing}
-			\hspace{2.3in}\= \hspace{2.6in}\= \kill % set up two tab positions
-			{\bf Govt. Home Science College} \>BCA(70.66\% ) \> 2017
-			
-		\end{tabbing}\vspace{-20pt}
-		
-		\begin{tabbing}%
-			\hspace{2.3in}\= \hspace{2.6in}\= \kill % set up two tab positions          
-			{\bf Kendriya Vidyalaya Hassan}  \>12th Std(68.6\%). \> 2014 
-		\end{tabbing}\vspace{-20pt}  
-		\begin{tabbing}%
-			\hspace{2.3in}\= \hspace{2.6in}\= \kill % set up two tab positions          
-			{\bf Kendriya Vidyalaya Hassan}  \>10th Std(7.8CGPA). \> 2012\\
-			\>
-		\end{tabbing}\vspace{-20pt}     
-		
-		\section{TECHINAL SKILLS}
-		\begin{itemize}
-			\item Tools/Framework: Git and GitHub(moderate),  Angular(basic), Tmux(basic)
-			\item Database:MariaDB(basics),SQLite(basics)
-			\item Languages: Java, TypeScript, JavaFX(moderate),PHP(moderate) 
-			\item Knows \LaTeX
-			\item Knows how to customize Vim(text), Bash(Terminal)
-			\item Good at exploring new technologies.
-		\end{itemize}        
-		
-		
-		\section{PROJECTS}
-		\begin{itemize}
-			\item Technical Paper On \LaTeX Web For Document Preparation \\
-			\href {https://github.com/arunjois/Latex}{https://github.com/arunjois/Latex}
-			
-			\item Developer and Maintainer of a Cross Platform Desktop Application Shankari\\
-			\href {https://github.com/joisjyotisha/Shankari-inital}{https://github.com/joisjyotisha/Shankari-inital}
-			
-			\item Social Networking for College(submitted) \\
-			\href{https://github.com/arunjois/test}{https://github.com/arunjois/test}
-		\end{itemize}          
-		\section{ACHIEVEMENTS}
-		\begin{itemize}
-			\item Has many contribution over GitHub.
-			\item Given a talk show in All India Radio Hassan. 
-		\end{itemize} 
-		\section{EXTRACURRICULAR ACTIVITIES}
-		\begin{itemize}
-			\item Basketball
-			\item Current Affairs
-			\item Learning Vedanga
-		\end{itemize}       
-		
-	\end{resume}
+	
+	
+	%-----------EXPERIENCE-----------------
+	\section{\textbf{EXPERIENCE}}
+	\resumeSubHeadingListStart
+	
+	\resumeSubheading
+	{NewFold Digital}{Bellandur, Bangalore}
+	{Operational Engineer}{Jul 2020 - Aug 2021}
+	\resumeItemListStart
+	\resumeItem{Linux System Administration}
+	{Hands on working with Linux server. Troubleshooting issues such as memory, storage, networking on CentOS. Has good understanding of LVM, RAID, Filesystems. Hands on working experience on network TCP/IP,OSI Model. } 
+	\resumeItem{cPanel-WHM}{Troubleshooting customer's cPanel issues releating to Exim,Dovecot, ApacheSpam Assassin,Roundcube etc. }
+	\resumeItem{Provisioning}{Provisioning backups server with Foreman, Using Puppet for configuration management tool Infrastructure as code.}
+	\resumeItem{GitOps}{Hands on working in GitOps. Using git to track the configuration and maintain the realiability of Infrastructure as code. }
+	\resumeItem{Backups with ZFS}
+	{Using ZFS for a new filesystem for backups.}
+	\resumeItemListEnd
+	\resumeSubheading
+	{NewFold Digital}{Bellandur, Bangalore}
+	{ Intership }{Jan 2020 - May 2022}
+	\resumeItemListStart
+	\resumeItem{Autoremediation Platform using Stackstorm}
+	{A proof of concepet for autoremediation platform. To diagnose and remediate server without human intervention and also to perform root cause analysis. }
+	\resumeItem{Chatbot}{Created a Chatbot service using Google Cloud Pub/Sub and Hubot to run scripts on a target server and also to get system stats using as CPU idle time, RAM usage etc. }
+	
+	\resumeItemListEnd
+	
+	% --------Multiple Positions Heading------------
+	%    \resumeSubSubheading
+	%     {Software Engineer I}{Oct 2014 - Sep 2016}
+	%     \resumeItemListStart
+	%        \resumeItem{Apache Beam}
+	%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+	%     \resumeItemListEnd
+	%    \resumeSubHeadingListEnd
+	%-------------------------------------------
+	
+	
+	\resumeSubHeadingListEnd
+	
+	
+	%------------Technologies--------------
+	\section{\textbf{SKILLS}}
+	\resumeSubHeadingListStart
+	\resumeItem{Known Techonologies}
+	{libvirtd,kvm,qemu,virtualaization,Puppet,Ansible,samaba,Git,Forman,tmux,Docker,
+		Kubernetes,Linux,RAID,PXE-boot,DHCP,}
+	
+	\resumeSubHeadingListEnd
+	\section{\textbf{TOOLS}}
+	\resumeSubHeadingListStart
+	\resumeItem{HAH}{arg2}
+	\resumeSubHeadingListEnd
+	%-----------PROJECTS-----------------
+	\section{\textbf{PROJECTS}}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Personal OTT platform using Samaba and ZFS}{Created a personal OTT platform using Samba server for file sharing and ZFS.}
+	\resumeSubItem{Web based LaTeX solution}
+	{A web based solution for Latex document writer in LAMP.}
+	\resumeSubItem{Hospital Management System on MEAN stack}
+	{A Hospital bed management system on MEAN stack.}
+	\resumeSubItem{Social Media for College}
+	{Social Networking for colleges. A website that facilities social networking for college activities. Written in LAMP \href{https://github.com/arunjois/test} {https://github.com/arunjois/test}}
+	\resumeSubHeadingListEnd
+	%-----------EDUCATION-----------------
+	\section{\textbf{EDUCATION}}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{R.V College of Enginnering}{Bangalore, KA}
+	{Master of Computer Application;  CGPA: 7.35}{Sept. 2017 -- Jun. 2020}
+	\resumeSubheading
+	{Govt. Home Science College}{Hassan, KA}
+	{Bachelor of Computer Applications;  Percentage:70.66 )}{Aug. 2014 -- Aprl. 2017}
+	\resumeSubHeadingListEnd
+	
+	
+	%
+	%--------PROGRAMMING SKILLS------------
+	%\section{Programming Skills}
+	%  \resumeSubHeadingListStart
+	%    \item{
+		%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+		%      \hfill
+		%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+		%    }
+	%  \resumeSubHeadingListEnd
+	
+	
+	%-------------------------------------------
 \end{document}
