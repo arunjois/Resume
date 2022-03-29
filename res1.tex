@@ -17,7 +17,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-
+\pdfgentounicode=1
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -50,7 +50,7 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
 	\item\small{
-		\textbf{#1}{: #2 \vspace{-2pt}}
+		\textbf{#1}{ #2 \vspace{-2pt}}
 	}
 }
 
@@ -110,21 +110,45 @@
 	{NewFold Digital}{Bellandur, Bangalore}
 	{Operational Engineer}{Jul 2020 - Aug 2021}
 	\resumeItemListStart
-	\resumeItem{Linux System Administration}
-	{Hands on working with Linux server. Troubleshooting issues such as memory, storage, networking on CentOS. Has good understanding of LVM, RAID, Filesystems. Hands on working experience on network TCP/IP,OSI Model. } 
-	\resumeItem{cPanel-WHM}{Troubleshooting customer's cPanel issues releating to Exim,Dovecot, ApacheSpam Assassin,Roundcube etc. }
-	\resumeItem{Provisioning}{Provisioning backups server with Foreman, Using Puppet for configuration management tool Infrastructure as code.}
-	\resumeItem{GitOps}{Hands on working in GitOps. Using git to track the configuration and maintain the realiability of Infrastructure as code. }
-	\resumeItem{Backups with ZFS}
-	{Using ZFS for a new filesystem for backups.}
+	\resumeItem{Linux System Administration\\}
+	{Hands on experience in Linux system administration.\\ Experienced in bash 
+	scripting/shell 
+	scripting.\\ Experienced in troubeleshooting issues related to memory, storage, 
+	networking on CentOS.\\ Good understanding of LVM, RAID, Linux Filesystems.\\ 
+	Knowledge of OSI Model and Local Area Networking(LAN).\\  
+	Exposure to virtualization using libvirtd,qemu,kvm.\\ Experience in writing Ansible 
+	script for Linux servers.\\ Experience in writing Perl code.\\} 
+
+	\resumeItem{cPanel-WHM\\}{Troubleshooting customer's cPanel related issues such as 
+		assigning quota to accounts(disk space, Email Accounts).\\ 
+		Troubleshooting customer's account to move between hosting plan. .\\
+		Troubleshooting Email related issues in Exim, Dovecot, ApacheSpam Assassin etc. \\
+		Troubleshooting issues with WordPress hosted site dealing with PHP and MYSQL. 
+		}
+	\resumeItem{Provisioning\\}{Knowledge in provisioning server with Foreman.\\
+			Experience in configuration management using Puppet for Infrastructure as 
+			code(IaC).\\ }
+	\resumeItem{GitOps\\}{Hands on work experience in GitOps(GitHub \& TravisCI-creating 
+		a CI/CD 
+		pipeline).\\ 
+		Experience in using git to track the configuration and maintain reliability 
+		of Infrastructure as code. 
+	\\Expertise in internal working of Git. }
+	\resumeItem{Backups with ZFS\\}
+	{ Worked on a project testing the feasibility of ZFS for backup system.\\
+	Knowledge of internal working of ZFS.
+	}
 	\resumeItemListEnd
 	\resumeSubheading
 	{NewFold Digital}{Bellandur, Bangalore}
 	{ Intership }{Jan 2020 - May 2022}
 	\resumeItemListStart
 	\resumeItem{Autoremediation Platform using Stackstorm}
-	{A proof of concepet for autoremediation platform. To diagnose and remediate server without human intervention and also to perform root cause analysis. }
-	\resumeItem{Chatbot}{Created a Chatbot service using Google Cloud Pub/Sub and Hubot to run scripts on a target server and also to get system stats using as CPU idle time, RAM usage etc. }
+	{A proof of concept for autoremediation platform to diagnose and remediate server 
+		without human intervention and also to perform root cause analysis. }
+	\resumeItem{Chatbot}{Created a Chatbot service using Google Cloud Pub/Sub and Hubot 
+		to run scripts on a target server and also to get system stats such as CPU idle 
+		time, RAM usage etc. }
 	
 	\resumeItemListEnd
 	
@@ -145,35 +169,37 @@
 	%------------Technologies--------------
 	\section{\textbf{SKILLS}}
 	\resumeSubHeadingListStart
-	\resumeItem{Known Techonologies}
-	{libvirtd,kvm,qemu,virtualaization,Puppet,Ansible,samaba,Git,Forman,tmux,Docker,
-		Kubernetes,Linux,RAID,PXE-boot,DHCP,}
+	\resumeItem{}
+	{libvirtd, KVM, qemu, virtualization, Puppet, Ansible ,Samba, Git, Foreman, tmux, 
+		Docker, Kubernetes, Linux, RAID, PXE-boot, DHCP, bash, }
 	
 	\resumeSubHeadingListEnd
-	\section{\textbf{TOOLS}}
-	\resumeSubHeadingListStart
-	\resumeItem{HAH}{arg2}
-	\resumeSubHeadingListEnd
+	%\section{\textbf{TOOLS}}
+	%\resumeSubHeadingListStart
+	%\resumeItem{HAH}{arg2}
+	%\resumeSubHeadingListEnd
 	%-----------PROJECTS-----------------
-	\section{\textbf{PROJECTS}}
+	\section{\textbf{PERSONAL PROJECTS}}
 	\resumeSubHeadingListStart
-	\resumeSubItem{Personal OTT platform using Samaba and ZFS}{Created a personal OTT platform using Samba server for file sharing and ZFS.}
+	\resumeSubItem{Personal OTT platform using Samba and ZFS}{Created a personal OTT platform using Samba server for media streaming.}
 	\resumeSubItem{Web based LaTeX solution}
-	{A web based solution for Latex document writer in LAMP.}
+	{A web based Latex document generator written in LAMP, where the user can generate 
+	a \LaTeX  document without writing a line of latex code. }
 	\resumeSubItem{Hospital Management System on MEAN stack}
-	{A Hospital bed management system on MEAN stack.}
+	{A Hospital bed management system on MEAN stack. 
+	A management tool to handle the availability bed in a hospital.}
 	\resumeSubItem{Social Media for College}
-	{Social Networking for colleges. A website that facilities social networking for college activities. Written in LAMP \href{https://github.com/arunjois/test} {https://github.com/arunjois/test}}
+	{Social Networking for colleges. A website that facilitates social networking for college activities. Written in LAMP \href{https://github.com/arunjois/test} {https://github.com/arunjois/test}}
 	\resumeSubHeadingListEnd
 	%-----------EDUCATION-----------------
 	\section{\textbf{EDUCATION}}
 	\resumeSubHeadingListStart
 	\resumeSubheading
-	{R.V College of Enginnering}{Bangalore, KA}
-	{Master of Computer Application;  CGPA: 7.35}{Sept. 2017 -- Jun. 2020}
+	{R.V College of Engineering}{Bangalore, KA}
+	{Master of Computer Applications-  CGPA: 7.35}{Sept. 2017 -- Jun. 2020}
 	\resumeSubheading
 	{Govt. Home Science College}{Hassan, KA}
-	{Bachelor of Computer Applications;  Percentage:70.66 )}{Aug. 2014 -- Aprl. 2017}
+	{Bachelor of Computer Applications-  Percentage:70.66\% }{Aug. 2014 -- Apr. 2017}
 	\resumeSubHeadingListEnd
 	
 	
